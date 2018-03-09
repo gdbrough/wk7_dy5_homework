@@ -1,13 +1,14 @@
-package Instruments;
+package Accessories;
 
+import Instruments.InstrumentType;
 import Stock.StockItem;
 
-public abstract class Instrument extends StockItem{
+public abstract class Accessories extends StockItem {
 
     private String name;
     private InstrumentType type;
 
-    public Instrument(int buyPrice, int sellPrice, String name, InstrumentType type) {
+    public Accessories(int buyPrice, int sellPrice, String name, InstrumentType type) {
         super(buyPrice, sellPrice);
         this.name = name;
         this.type = type;
