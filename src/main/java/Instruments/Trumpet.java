@@ -1,13 +1,20 @@
 package Instruments;
 
-public class Trumpet extends Brass implements IPlay{
+import Stock.ISell;
 
-    public Trumpet(int buyPrice, int sellPrice, String name, InstrumentType type, int numValves) {
-        super(buyPrice, sellPrice, name, type, numValves);
+public class Trumpet extends Brass {
+
+    public Trumpet(String name, int buyPrice, int sellPrice, InstrumentType type, int numValves) {
+        super(name, buyPrice, sellPrice, type, numValves);
     }
 
     @Override
     public String play() {
         return "And the trumpets they go";
+    }
+
+    @Override
+    public int calculateMarkup(int buyPrice, int sellPrice) {
+        return sellPrice - buyPrice;
     }
 }

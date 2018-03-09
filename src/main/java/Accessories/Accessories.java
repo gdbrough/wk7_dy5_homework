@@ -1,25 +1,16 @@
 package Accessories;
 
 import Instruments.InstrumentType;
+import Stock.ISell;
 import Stock.StockItem;
 
-public abstract class Accessories extends StockItem {
+public abstract class Accessories extends StockItem implements ISell {
 
-    private String name;
     private InstrumentType type;
 
-    public Accessories(int buyPrice, int sellPrice, String name, InstrumentType type) {
-        super(buyPrice, sellPrice);
-        this.name = name;
+    public Accessories(String name, int buyPrice, int sellPrice, InstrumentType type) {
+        super(name, buyPrice, sellPrice);
         this.type = type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public InstrumentType getType() {
@@ -28,5 +19,10 @@ public abstract class Accessories extends StockItem {
 
     public void setType(InstrumentType type) {
         this.type = type;
+    }
+
+    @Override
+    public int calculateMarkup(int buyPrice, int sellPrice) {
+        return sellPrice - buyPrice;
     }
 }

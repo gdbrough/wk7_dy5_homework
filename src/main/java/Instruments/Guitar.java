@@ -2,13 +2,13 @@ package Instruments;
 
 import Stock.ISell;
 
-public class Guitar extends StringInst implements IPlay, ISell {
+public class Guitar extends StringInst {
 
     private boolean acoustic;
     private int numPickUps;
 
-    public Guitar(int buyPrice, int sellPrice, String name, InstrumentType type, int numStrings, boolean acoustic, int numPickUps) {
-        super(buyPrice, sellPrice, name, type, numStrings);
+    public Guitar(String name, int buyPrice, int sellPrice, InstrumentType type, int numStrings, boolean acoustic, int numPickUps) {
+        super(name, buyPrice, sellPrice, type, numStrings);
         this.acoustic = acoustic;
         this.numPickUps = numPickUps;
     }

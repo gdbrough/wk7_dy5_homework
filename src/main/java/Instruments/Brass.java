@@ -4,8 +4,8 @@ public abstract class Brass extends Instrument {
 
     private int numValves;
 
-    public Brass(int buyPrice, int sellPrice, String name, InstrumentType type, int numValves) {
-        super(buyPrice, sellPrice, name, type);
+    public Brass(String name, int buyPrice, int sellPrice, InstrumentType type, int numValves) {
+        super(name, buyPrice, sellPrice, type);
         this.numValves = numValves;
     }
 

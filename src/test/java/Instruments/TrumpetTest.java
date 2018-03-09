@@ -1,5 +1,6 @@
 package Instruments;
 
+import Stock.ISell;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class TrumpetTest {
 
     @Before
     public void setUp() {
-        trumpet = new Trumpet(50, 75, "Trumpet", InstrumentType.BRASS, 3);
+        trumpet = new Trumpet("Trumpet", 50, 75, InstrumentType.BRASS, 3);
     }
 
     @Test
@@ -27,5 +28,10 @@ public class TrumpetTest {
     @Test
     public void testCanPlayTrumpet() {
         assertEquals("And the trumpets they go", trumpet.play());
+    }
+
+    @Test
+    public void testCanCalculateMarkup() {
+        assertEquals(25, trumpet.calculateMarkup(trumpet.getBuyPrice(), trumpet.getSellPrice()));
     }
 }

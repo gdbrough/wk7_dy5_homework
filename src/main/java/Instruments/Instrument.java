@@ -1,24 +1,15 @@
 package Instruments;
 
+import Stock.ISell;
 import Stock.StockItem;
 
-public abstract class Instrument extends StockItem{
+public abstract class Instrument extends StockItem implements IPlay, ISell{
 
-    private String name;
     private InstrumentType type;
 
-    public Instrument(int buyPrice, int sellPrice, String name, InstrumentType type) {
-        super(buyPrice, sellPrice);
-        this.name = name;
+    public Instrument(String name, int buyPrice, int sellPrice, InstrumentType type) {
+        super(name, buyPrice, sellPrice);
         this.type = type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public InstrumentType getType() {

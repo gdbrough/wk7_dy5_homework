@@ -7,11 +7,13 @@ public abstract class StringInst extends Accessories{
     private String itemName;
     private int numInPack;
 
-    public StringInst(int buyPrice, int sellPrice, String name, InstrumentType type, String itemName, int numInPack) {
-        super(buyPrice, sellPrice, name, type);
+    public StringInst(String name, int buyPrice, int sellPrice, InstrumentType type, String itemName, int numInPack) {
+        super(name, buyPrice, sellPrice, type);
         this.itemName = itemName;
         this.numInPack = numInPack;
     }
+
+
 
     public String getItemName() {
         return itemName;

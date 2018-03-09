@@ -5,8 +5,8 @@ public abstract class Keyboard extends Instrument {
     private int numKeys;
     private boolean stringed;
 
-    public Keyboard(int buyPrice, int sellPrice, String name, InstrumentType type, int numKeys, boolean stringed) {
-        super(buyPrice, sellPrice, name, type);
+    public Keyboard(String name, int buyPrice, int sellPrice, InstrumentType type, int numKeys, boolean stringed) {
+        super(name, buyPrice, sellPrice, type);
         this.numKeys = numKeys;
         this.stringed = stringed;
     }

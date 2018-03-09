@@ -4,8 +4,8 @@ public abstract class StringInst extends Instrument {
 
     private int numStrings;
 
-    public StringInst(int buyPrice, int sellPrice, String name, InstrumentType type, int numStrings) {
-        super(buyPrice, sellPrice, name, type);
+    public StringInst(String name, int buyPrice, int sellPrice, InstrumentType type, int numStrings) {
+        super(name, buyPrice, sellPrice, type);
         this.numStrings = numStrings;
     }
 
