@@ -41,8 +41,8 @@ public class Shop implements ISell {
 
     public int calculateTotalMarkup(){
         int totalMarkup = 0;
-        for (int index = 0; index < stockItems.size(); index++) {
-            totalMarkup += calculateMarkup(stockItems.get(index).getBuyPrice(), stockItems.get(index).getSellPrice());
+        for (StockItem stockItem : stockItems){
+            totalMarkup += calculateMarkup(stockItem.getBuyPrice(), stockItem.getSellPrice());
         }
         return totalMarkup;
     }
