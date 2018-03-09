@@ -1,7 +1,5 @@
 package Instruments;
 
-import Stock.ISell;
-
 public class Guitar extends StringInst {
 
     private boolean acoustic;

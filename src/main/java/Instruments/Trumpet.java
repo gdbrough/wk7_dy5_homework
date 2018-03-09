@@ -1,7 +1,5 @@
 package Instruments;
 
-import Stock.ISell;
-
 public class Trumpet extends Brass {
 
     public Trumpet(String name, int buyPrice, int sellPrice, InstrumentType type, int numValves) {

@@ -1,6 +1,5 @@
 package Accessories;
 
-import Instruments.Guitar;
 import Instruments.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;

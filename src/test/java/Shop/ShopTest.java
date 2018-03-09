@@ -16,7 +16,6 @@ import static org.junit.Assert.assertTrue;
 public class ShopTest {
 
     Shop shop;
-    StockItem stockItem;
     StockItem guitar;
     StockItem trumpet;
     StockItem guitarA;
@@ -32,11 +31,6 @@ public class ShopTest {
         stockItems.add(guitarA);
         shop = new Shop(stockItems);
     }
-
-    //    @Test
-//    public void testCanGetStockItem() {
-//        assertEquals("0", shop.getStockItem());
-//    }
 
 
     @Test

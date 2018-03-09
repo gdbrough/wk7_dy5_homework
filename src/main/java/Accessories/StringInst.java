@@ -13,8 +13,6 @@ public abstract class StringInst extends Accessories{
         this.numInPack = numInPack;
     }
 
-
-
     public String getItemName() {
         return itemName;
     }
