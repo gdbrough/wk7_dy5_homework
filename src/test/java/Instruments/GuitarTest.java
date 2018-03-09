@@ -12,12 +12,12 @@ public class GuitarTest {
 
     @Before
     public void setUp() {
-        guitar = new Guitar(100, 125, "Fender", InstrumentType.STRING, 6, false, 2);
+        guitar = new Guitar(100, 125, "Guitar", InstrumentType.STRING, 6, false, 2);
     }
 
     @Test
     public void testCanGetName() {
-        assertEquals("Fender", guitar.getName());
+        assertEquals("Guitar", guitar.getName());
     }
 
     @Test
@@ -48,5 +48,15 @@ public class GuitarTest {
     @Test
     public void testcanGetNumberOfPickUps() {
         assertEquals(2, guitar.getNumPickUps());
+    }
+
+    @Test
+    public void testGuitarCanBePlayed() {
+        assertEquals("While my guitar gently weeps", guitar.play());
+    }
+
+    @Test
+    public void testCanCalculateMarkup() {
+        assertEquals(25, guitar.calculateMarkup(guitar.getBuyPrice(), guitar.getSellPrice()));
     }
 }

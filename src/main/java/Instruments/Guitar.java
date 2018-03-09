@@ -1,6 +1,8 @@
 package Instruments;
 
-public class Guitar extends StringInst {
+import Stock.ISell;
+
+public class Guitar extends StringInst implements IPlay, ISell {
 
     private boolean acoustic;
     private int numPickUps;
@@ -25,5 +27,15 @@ public class Guitar extends StringInst {
 
     public void setNumPickUps(int numPickUps) {
         this.numPickUps = numPickUps;
+    }
+
+    @Override
+    public String play() {
+        return "While my guitar gently weeps";
+    }
+
+    @Override
+    public int calculateMarkup(int buyPrice, int sellPrice) {
+        return sellPrice - buyPrice;
     }
 }
